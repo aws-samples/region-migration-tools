@@ -1,10 +1,8 @@
 # Region Migration Tools
 
-Amazon Web Services (AWS) provides a highly reliable, scalable, and low-cost infrastructure platform in the cloud in many Regions around the world. AWS has designed these Regions to be isolated from each other so that you can achieve high level of fault tolerance and improved stability in your applications.
-
 As AWS opens up new Regions, you may look to migrate workloads from existing Regions for reasons such as improving latency or meeting new compliance requirements. Embarking on such a migration would require you to go through the migration journey of assessing the source environment, mobilizing resources to lay the foundation for the migration and finally, migrating the workloads. 
 
-This Repository contains sample scripts to help you undertake analysis in AWS Region to Region Migrations, or when launching into a new Region
+This Repository contains sample scripts to help you undertake analysis in AWS Region to Region Migrations, or when launching into a new Region.
 
 
 ## Installation
@@ -66,10 +64,10 @@ Lambda runtimes support for Graviton2 docs: https://docs.aws.amazon.com/lambda/l
 ## compare_service_features.py
 Compares Services and Features available between source and target region based on CFN Resource Spec
 
-## Security
+# Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
 
-## License
+# License
 
 This library is licensed under the MIT-0 License. See the LICENSE file.
