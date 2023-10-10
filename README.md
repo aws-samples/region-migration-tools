@@ -31,7 +31,7 @@ This script fetches the EC2 instances in use in a specified region, checks if th
 So, the AWSPricing API returns a very large and complex JSON structure that you need to navigate to find the specific price you are looking for.
 Alternatively, the download of the entire EC2 pricing file as a JSON from a URL provided by AWS is very large (around 70MB), and parsing it is non-trivial due to its structure.
 
-Given these complexities, i've used third-party service https://instances.vantage.sh/ which you will need to create an account with a get a free API Token to use this script.
+Given these complexities, we've used third-party service https://instances.vantage.sh/ which you will need to create an account with a get a free API Token to use this script.
 
 This script handles pagination and assumes you have set up AWS credentials. It does not handle rate limits, so be aware of that if you are working with a large number of instances.
 
