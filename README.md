@@ -57,6 +57,19 @@ This Python script takes as input two AWS Regions and compares the Service Quota
 ```python compare_running_ec2_quotas.py  <region_1> <region_2>```
 <region_1>, <region_2> Source and Target Region to compare
 
+## get_applied_quotas.py & check_applied_quotas.py
+To assist with quotas when the migration is also taking place across accounts, this Python script will take as input a single AWS Region and writes out to a CSV any applied Service Quotas that are different to the defined default. This resulting file can then be passed into the 2nd script that will check the values in the CSV against the target region defined and print out any differences.
+This can also help in other scenarios such as when promoting code from dev/test accounts to a production account
+
+### Usage
+```python python get_applied_quotas.py <region>```
+<region> Region to pull quotas
+
+```python check_applied_quotas.py <region> <csv_file>```
+<region> Region to check against
+<csv_file> CSV file generated from get_applied_quotas.py
+
+
 ## lambda_region_finder.sh  Graviton2 Function Finder
 Identify Lambda functions with Graviton2 compatible and not-compatible runtimes versions.  Looks in all regions where Graviton2 Lambda is currently available.
 Lambda runtimes support for Graviton2 docs: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
