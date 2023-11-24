@@ -39,34 +39,34 @@ This script handles pagination and assumes you have set up AWS credentials. It d
 This Python script takes as input an AWS calculator JSON file and a list of AWS region codes. For each region code in the list, it updates all "region" values in the JSON file to match the region code. The modified JSON data is then posted to a specified AWS URL, and the script prints out an updated AWS calculator URL for each region.
 
 ### Usage
-```python aws_calc_region_swap.py <estimate_id> <region_1> <region_2> ... <region_n>```
-<estimate_id> is the ID of the source estimate.
+```python aws_calc_region_swap.py <estimate_id> <region_1> <region_2> ... <region_n>```  
+\<estimate_id> is the ID of the source estimate.  
 <region_1>, <region_2>, ..., <region_n> is a space-separated list of AWS region codes.
 
 ## compare_quotas.py
 This Python script takes as input two AWS Regions and compares the Service Quotas in each, printing out any differences
 
 ### Usage
-```python compare_quotas.py  <region_1> <region_2>```
-<region_1>, <region_2> Source and Target Region to compare
+```python compare_quotas.py  <region_1> <region_2>```  
+\<region_1>, <region_2> Source and Target Region to compare
 
 ## compare_running_ec2_quotas.py
 This Python script takes as input two AWS Regions and compares the Service Quotas related to Running EC2 Instances/Hosts in each, printing out any differences
 
 ### Usage
-```python compare_running_ec2_quotas.py  <region_1> <region_2>```
-<region_1>, <region_2> Source and Target Region to compare
+```python compare_running_ec2_quotas.py  <region_1> <region_2>```  
+\<region_1>, <region_2> Source and Target Region to compare
 
 ## get_applied_quotas.py & check_applied_quotas.py
 To assist with quotas when the migration is also taking place across accounts, this Python script will take as input a single AWS Region and writes out to a CSV any applied Service Quotas that are different to the defined default. This resulting file can then be passed into the 2nd script that will check the values in the CSV against the target region defined and print out any differences.
 This can also help in other scenarios such as when promoting code from dev/test accounts to a production account
 
 ### Usage
-```python python get_applied_quotas.py <region>```
-<region> Region to pull quotas
+```python python get_applied_quotas.py <region>```  
+\<region> Region to pull quotas
 
-```python check_applied_quotas.py <region> <csv_file>```
-<region> Region to check against
+```python check_applied_quotas.py <region> <csv_file>```  
+\<region> Region to check against  
 <csv_file> CSV file generated from get_applied_quotas.py
 
 
@@ -76,6 +76,12 @@ Lambda runtimes support for Graviton2 docs: https://docs.aws.amazon.com/lambda/l
 
 ## compare_service_features.py
 Compares Services and Features available between source and target region based on CFN Resource Spec
+
+### Usage
+```python compare_service_features.py <source_region> <target_region> [service]```  
+\<source_region> Source Region  
+<target_region> Target Region  
+[service] Optional Service
 
 # Security
 
