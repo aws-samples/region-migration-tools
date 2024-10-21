@@ -1,6 +1,7 @@
 """
 compares the Service Quotas between regions, printing out any differences
 """
+
 import sys
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
@@ -8,12 +9,14 @@ from botocore.exceptions import BotoCoreError, ClientError
 
 def get_service_quotas(client, service_code):
     try:
-        response = client.list_service_quotas(ServiceCode=service_code)
+        quotas = []
+        paginator = client.get_paginator("list_service_quotas")
+        for page in paginator.paginate(ServiceCode=service_code):
+            quotas.extend(page["Quotas"])
+        return quotas
     except (BotoCoreError, ClientError) as error:
         print(f"Error getting quotas for service {service_code}: {error}")
         return None
-
-    return response["Quotas"]
 
 
 def compare_service_quotas(region1, region2):
@@ -45,10 +48,23 @@ def compare_service_quotas(region1, region2):
         if quotas1 is None or quotas2 is None:
             continue
 
-        for quota1, quota2 in zip(quotas1, quotas2):
-            if quota1["Value"] != quota2["Value"]:
+        quotas1_quota_value = {quota["QuotaName"]: quota["Value"] for quota in quotas1}
+        quotas2_quota_value = {quota["QuotaName"]: quota["Value"] for quota in quotas2}
+
+        # Compare quotas in both regions
+        for key in set(quotas1_quota_value.keys()) | set(quotas2_quota_value.keys()):
+            if key in quotas1_quota_value and key in quotas2_quota_value:
+                if quotas1_quota_value[key] != quotas2_quota_value[key]:
+                    print(
+                        f"Different quota for {service} ({key}) in {region1} ({quotas1_quota_value[key]}) and {region2} ({quotas2_quota_value[key]})"
+                    )
+            elif key in quotas1_quota_value:
                 print(
-                    f"Different quota for {service} ({quota1['QuotaName']}) in {region1} ({quota1['Value']}) and {region2} ({quota2['Value']})"
+                    f"Quota {key} for {service} only exists in {region1} ({quotas1_quota_value[key]})"
+                )
+            else:
+                print(
+                    f"Quota {key} for {service} only exists in {region2} ({quotas2_quota_value[key]})"
                 )
 
 
