@@ -1,0 +1,104 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  Region Comparison Tool
+
+# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
+Globals:
+  Function:
+    Timeout: 30
+    MemorySize: 1769
+    Tracing: Active
+  Api:
+    TracingEnabled: true
+Resources:
+  LoggingTable:
+    Type: AWS::Serverless::SimpleTable
+  CacheTable:
+    Type: AWS::Serverless::SimpleTable
+  RegionComparisonFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      CodeUri: region_compare/
+      Handler: app.lambda_handler
+      Runtime: python3.12
+      Architectures:
+        - x86_64
+      Environment:
+        Variables:
+          LOGGING_TABLE: !Ref LoggingTable
+          CACHE_TABLE: !Ref CacheTable
+      Policies:
+        - Version: "2012-10-17"
+          Statement:
+            - Effect: Allow
+              Action:
+                - account:ListRegions
+              Resource:
+                !Join [
+                  "",
+                  ["arn:aws:account::", !Ref AWS::AccountId, ":account"],
+                ]
+            - Effect: Allow
+              Action:
+                - dynamodb:PutItem
+              Resource:
+                !Join [
+                  "",
+                  [
+                    "arn:",
+                    !Ref AWS::Partition,
+                    ":dynamodb:",
+                    !Ref AWS::Region,
+                    ":",
+                    !Ref AWS::AccountId,
+                    ":table/",
+                    !Ref LoggingTable,
+                  ],
+                ]
+            - Effect: Allow
+              Action:
+                - dynamodb:PutItem
+                - dynamodb:GetItem
+              Resource:
+                !Join [
+                  "",
+                  [
+                    "arn:",
+                    !Ref AWS::Partition,
+                    ":dynamodb:",
+                    !Ref AWS::Region,
+                    ":",
+                    !Ref AWS::AccountId,
+                    ":table/",
+                    !Ref CacheTable,
+                  ],
+                ]
+
+      Events:
+        RegionCompare:
+          Type: HttpApi # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /
+            Method: get
+
+  ApplicationResourceGroup:
+    Type: AWS::ResourceGroups::Group
+    Properties:
+      Name:
+        Fn::Sub: ApplicationInsights-SAM-${AWS::StackName}
+      ResourceQuery:
+        Type: CLOUDFORMATION_STACK_1_0
+  ApplicationInsightsMonitoring:
+    Type: AWS::ApplicationInsights::Application
+    Properties:
+      ResourceGroupName:
+        Ref: ApplicationResourceGroup
+      AutoConfigurationEnabled: true
+Outputs:
+  # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
+  # Find out more about other implicit resources you can reference within SAM
+  # https://github.com/awslabs/serverless-application-model/blob/master/docs/internals/generated_resources.rst#api
+  RegionComparisonFunction:
+    Description: Region Comparison Lambda Function ARN
+    Value: !GetAtt RegionComparisonFunction.Arn
