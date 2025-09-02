@@ -83,6 +83,17 @@ Compares Services and Features available between source and target region based 
 <target_region> Target Region  
 [service] Optional Service
 
+## compare_cloudformation_registry.py
+Compares CloudFormation resource types and properties available between source and target region using CloudFormation registry APIs.
+
+**Note:** Users must enable the region(s) they are comparing: [Enable or disable AWS Regions in your account](https://docs.aws.amazon.com/accounts/latest/reference/manage-acct-regions.html)
+
+### Usage
+```python compare_cloudformation_registry.py <source_region> <target_region> [service]```  
+\<source_region> Source Region  
+<target_region> Target Region  
+[service] Optional Service
+
 # Security
 
 See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more information.
