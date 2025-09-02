@@ -1,13 +1,16 @@
 """
-This script gets the EC2 instance families from two regions and compares them. 
-It then prints the instance families that are in the first region, 
-along with the Instance ID to help identify, but not in the second.
+Compare EC2 instance families between two regions.
+
+This script identifies EC2 instance families currently running in the source
+region that are not available in the target region, helping identify potential
+compatibility issues during migration.
 """
 import sys
 import boto3
+from utils.aws_clients import aws_client_factory
 
 def get_in_use_instance_families_and_ids(region):
-    ec2 = boto3.client('ec2', region_name=region)
+    ec2 = aws_client_factory.get_ec2_client(region)
     paginator = ec2.get_paginator('describe_instances')
 
     instance_families_and_ids = {}
@@ -25,18 +28,42 @@ def get_in_use_instance_families_and_ids(region):
 
     return instance_families_and_ids
 
-def compare_instance_families(region1, region2):
+def compare_instance_families(region1, region2, verbose=False):
+    """
+    Compare EC2 instance families between two regions
+    
+    Args:
+        region1: Source region with running instances
+        region2: Target region to check availability
+        verbose: Enable verbose output
+    """
+    if verbose:
+        print(f"Checking EC2 instance families in {region1} vs {region2}")
+        print("Fetching running instances from source region...")
+    
     families_and_ids_region1 = get_in_use_instance_families_and_ids(region1)
+    
+    if verbose:
+        print(f"Found {len(families_and_ids_region1)} instance families in {region1}")
+        print("Fetching available instance types from target region...")
+    
     families_region2 = get_ec2_families(region2)
+    
+    if verbose:
+        print(f"Found {len(families_region2)} instance families available in {region2}")
 
     not_in_region2 = {k: v for k, v in families_and_ids_region1.items() if k not in families_region2}
 
+    if not not_in_region2:
+        print(f"✓ All EC2 instance families from {region1} are available in {region2}")
+        return
+    
     print(f"EC2 Instance Families in use in {region1} not available in {region2}:")
     for family, ids in not_in_region2.items():
-        print(f"Family: {family}, Instance IDs: {ids}")
+        print(f"  Family: {family}, Instance IDs: {ids}")
 
 def get_ec2_families(region):
-    ec2 = boto3.client('ec2', region_name=region)
+    ec2 = aws_client_factory.get_ec2_client(region)
     paginator = ec2.get_paginator('describe_instance_types')
 
     instance_families = set()

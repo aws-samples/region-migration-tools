@@ -1,9 +1,14 @@
-"""Compares Services and Features available between 
-source and target region based on CFN Resource Spec"""
+"""
+Compare AWS services and features between regions using CloudFormation Resource Specifications.
+
+This script compares CloudFormation property types (which represent AWS services and features)
+between two regions to identify differences that might impact migration planning.
+"""
 import json
 import re
 import sys
-
+import argparse
+import os
 import requests
 
 def get_region_spec(region, local_cfn_resource_specs):
