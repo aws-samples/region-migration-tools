@@ -4,9 +4,28 @@ As AWS opens up new Regions, you may look to migrate workloads from existing Reg
 
 This Repository contains sample scripts to help you undertake analysis in AWS Region to Region Migrations, or when launching into a new Region.
 
+## Recent Improvements
+
+- **Enhanced Reliability**: All scripts now use boto3's built-in retry mechanisms with exponential backoff
+- **Better Rate Limiting**: Removed manual sleep statements in favor of adaptive retry configurations
+- **Improved Security**: Environment variable support for API tokens (Vantage API)
+- **Consistent Client Management**: Centralized AWS client factory with optimized configurations
+- **Standardized CLI**: All scripts now use argparse with proper help text, validation, and consistent options
+- **Better Error Handling**: Improved error messages and graceful handling of edge cases
+- **Verbose Output**: Optional verbose mode for detailed progress information
+
 
 ## Installation
-These scripts are primarily written in Python utilising Boto3. You'll need to install it first, if you haven't already, using pip: `pip install boto3`.
+These scripts are primarily written in Python utilising Boto3. Install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or install manually:
+```bash
+pip install boto3 botocore requests
+```
 
 ## Usage
 See each individual script description below
@@ -16,12 +35,12 @@ This script gets the EC2 instance families from two regions and compares them. I
 
 Please note that this script assumes that you have set up AWS credentials in your environment or in the `~/.aws/credentials` file. If not, you need to configure it by running `aws configure` in your terminal and following the prompts.
 
-Also, note that this script uses the `describe_instance_types` API call which may have limitations on how many times you can call it within a certain period of time. If you are working with a large number of instances, you may need to handle rate limiting; pagination is catered for.
+This script uses boto3's built-in retry mechanisms to handle API rate limiting automatically. Pagination is handled automatically.
 
 ## check_rds_types.py
 This script fetches the RDS instance classes and engine version in use in a specified region, checks if they are available in a second region, and prints out the classes versions and instance IDs that are not available in the second region.
 
-This script handles pagination and assumes you have set up AWS credentials. It does not handle rate limits, so be aware of that if you are working with a large number of instances.
+This script handles pagination and rate limiting automatically using boto3's built-in retry mechanisms.
 
 Raised and resolved PFR: https://github.com/boto/boto3/issues/3752
 
@@ -33,7 +52,12 @@ Alternatively, the download of the entire EC2 pricing file as a JSON from a URL 
 
 Given these complexities, we've used third-party service https://instances.vantage.sh/ which you will need to create an account with a get a free API Token to use this script.
 
-This script handles pagination and assumes you have set up AWS credentials. It does not handle rate limits, so be aware of that if you are working with a large number of instances.
+**Setup**: Set your Vantage API token as an environment variable:
+```bash
+export VANTAGE_API_TOKEN="your_token_here"
+```
+
+This script handles pagination and rate limiting automatically using boto3's built-in retry mechanisms.
 
 ## aws_calc_region_swap.py
 This Python script takes as input an AWS calculator JSON file and a list of AWS region codes. For each region code in the list, it updates all "region" values in the JSON file to match the region code. The modified JSON data is then posted to a specified AWS URL, and the script prints out an updated AWS calculator URL for each region.
@@ -74,14 +98,6 @@ This can also help in other scenarios such as when promoting code from dev/test 
 Identify Lambda functions with Graviton2 compatible and not-compatible runtimes versions.  Looks in all regions where Graviton2 Lambda is currently available.
 Lambda runtimes support for Graviton2 docs: https://docs.aws.amazon.com/lambda/latest/dg/lambda-runtimes.html
 
-## compare_service_features.py
-Compares Services and Features available between source and target region based on CFN Resource Spec
-
-### Usage
-```python compare_service_features.py <source_region> <target_region> [service]```  
-\<source_region> Source Region  
-<target_region> Target Region  
-[service] Optional Service
 
 ## compare_cloudformation_registry.py
 Compares CloudFormation resource types and properties available between source and target region using CloudFormation registry APIs.
@@ -93,6 +109,16 @@ Compares CloudFormation resource types and properties available between source a
 \<source_region> Source Region  
 <target_region> Target Region  
 [service] Optional Service
+
+## compare_service_features.py
+Compares Services and Features available between source and target region based on CFN Resource Spec (useful for if you don't/can't have the target region enabled)
+
+### Usage
+```python compare_service_features.py <source_region> <target_region> [service]```  
+\<source_region> Source Region  
+<target_region> Target Region  
+[service] Optional Service
+
 
 # Security
 

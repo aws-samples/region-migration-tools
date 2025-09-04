@@ -1,14 +1,16 @@
 """
-This script fetches the RDS instance classes and engine version in use in a specified region,
-checks if they are available in a second region,
-and prints out the classes versions and instance IDs that are not available in the second region.
+Compare RDS instance classes and engine versions between two regions.
+
+This script checks if RDS instances running in the source region are available
+in the target region, including both instance classes and engine versions.
 """
 import sys
 import boto3
+from utils.aws_clients import aws_client_factory
 
 
 def get_in_use_rds_classes_and_ids(region):
-    rds = boto3.client("rds", region_name=region)
+    rds = aws_client_factory.get_rds_client(region)
     paginator = rds.get_paginator("describe_db_instances")
 
     instance_classes_and_ids = {}
@@ -30,11 +32,31 @@ def get_in_use_rds_classes_and_ids(region):
     return instance_classes_and_ids, instance_engines_and_versions
 
 
-def compare_rds_classes(region1, region2):
+def compare_rds_classes(region1, region2, verbose=False):
+    """
+    Compare RDS instance classes and engine versions between two regions
+    
+    Args:
+        region1: Source region with RDS instances
+        region2: Target region to check availability
+        verbose: Enable verbose output
+    """
+    if verbose:
+        print(f"Checking RDS instances in {region1} vs availability in {region2}")
+        print("Fetching RDS instances from source region...")
+    
     (
         classes_and_ids_region1,
         engines_and_versions_region1,
     ) = get_in_use_rds_classes_and_ids(region1)
+
+    if not engines_and_versions_region1:
+        print(f"No RDS instances found in {region1}")
+        return
+    
+    if verbose:
+        print(f"Found {len(engines_and_versions_region1)} RDS instance classes in {region1}")
+        print("Checking availability in target region...")
 
     not_in_region2 = {}
 
@@ -53,6 +75,10 @@ def compare_rds_classes(region1, region2):
                 version_available,
             )
 
+    if not not_in_region2:
+        print(f"✓ All RDS instance classes and engine versions from {region1} are available in {region2}")
+        return
+
     print(
         f"RDS Instance Classes and/or Engine Versions in use in {region1} not available in {region2}:"
     )
@@ -64,20 +90,20 @@ def compare_rds_classes(region1, region2):
     ) in not_in_region2.items():
         if not class_available and not version_available:
             print(
-                f"Class: {class_}, Engine Version: {version}, Instance IDs: {ids} - both class and version not available"
+                f"  Class: {class_}, Engine Version: {version}, Instance IDs: {ids} - both class and version not available"
             )
         elif not class_available:
             print(
-                f"Class: {class_}, Engine Version: {version}, Instance IDs: {ids} - class not available"
+                f"  Class: {class_}, Engine Version: {version}, Instance IDs: {ids} - class not available"
             )
         else:
             print(
-                f"Class: {class_}, Engine Version: {version}, Instance IDs: {ids} - engine version not available"
+                f"  Class: {class_}, Engine Version: {version}, Instance IDs: {ids} - engine version not available"
             )
 
 
 def get_rds_classes(region, engine):
-    rds = boto3.client("rds", region_name=region)
+    rds = aws_client_factory.get_rds_client(region)
     paginator = rds.get_paginator("describe_orderable_db_instance_options")
 
     instance_classes = set()
@@ -90,7 +116,7 @@ def get_rds_classes(region, engine):
 
 
 def get_rds_engine_versions(region, engine):
-    rds = boto3.client("rds", region_name=region)
+    rds = aws_client_factory.get_rds_client(region)
     paginator = rds.get_paginator("describe_orderable_db_instance_options")
 
     engine_versions = set()

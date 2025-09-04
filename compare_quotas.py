@@ -1,10 +1,14 @@
 """
-compares the Service Quotas between regions, printing out any differences
+Compare AWS service quotas between two regions.
+
+This script compares service quotas between a source and target region,
+identifying differences that might impact migration planning.
 """
 
 import sys
 import boto3
 from botocore.exceptions import BotoCoreError, ClientError
+from utils.aws_clients import aws_client_factory
 
 
 def get_service_quotas(client, service_code):
@@ -20,11 +24,9 @@ def get_service_quotas(client, service_code):
 
 
 def compare_service_quotas(region1, region2):
-    session1 = boto3.Session(region_name=region1)
-    session2 = boto3.Session(region_name=region2)
-
-    service_quotas1 = session1.client("service-quotas")
-    service_quotas2 = session2.client("service-quotas")
+    # Use optimized quota clients with proper retry configuration
+    service_quotas1 = aws_client_factory.get_quota_client(region1)
+    service_quotas2 = aws_client_factory.get_quota_client(region2)
 
     paginator1 = service_quotas1.get_paginator("list_services")
     paginator2 = service_quotas2.get_paginator("list_services")

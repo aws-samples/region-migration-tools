@@ -1,4 +1,9 @@
-"""Swaps a region for a given AWS Calculator link"""
+"""
+Update AWS Calculator estimates for multiple regions.
+
+This script takes an AWS Calculator estimate and creates new estimates
+for each specified region by updating all region references in the estimate.
+"""
 import sys
 import json
 import argparse
@@ -72,7 +77,7 @@ def main():
         print(f"Processing region {region}")
         data = modify_region_in_json(source_json, region)
         if data is not None:
-            print(data)
+            #print(data)
             saved_key = post_data_to_url(data)
             if saved_key is not None:
                 print(f"Updated Calculator URL for {region}: {CALC_URL}{saved_key}")
