@@ -1,0 +1,4 @@
+strands-agents-tools
+mcp[cli]
+boto3
+botocore
