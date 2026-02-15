@@ -5,16 +5,26 @@ checks if they are available in a second region, and looks up the pricing of eac
 Requires Vantage API Token
 """
 import sys
+import os
 from collections import defaultdict
 import boto3
 import requests
+from utils.aws_clients import aws_client_factory
 
-TOKEN = "INSERT_TOKEN_HERE"
+def get_vantage_token():
+    """Get Vantage API token from environment variable"""
+    token = os.getenv('VANTAGE_API_TOKEN', 'INSERT_TOKEN_HERE')
+    if token == "INSERT_TOKEN_HERE":
+        print("Warning: Please set VANTAGE_API_TOKEN environment variable")
+        print("You can get a free API token from https://instances.vantage.sh/")
+    return token
+
+TOKEN = get_vantage_token()
 HEADERS = {"accept": "application/json", "authorization": f"Bearer {TOKEN}"}
 
 
 def get_in_use_ec2_types_and_ids(region):
-    ec2 = boto3.client("ec2", region_name=region)
+    ec2 = aws_client_factory.get_ec2_client(region)
     paginator = ec2.get_paginator("describe_instances")
 
     instance_types_and_ids = defaultdict(list)

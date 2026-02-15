@@ -1,0 +1,612 @@
+Service,Quota Name,Applied Quota,Default Quota
+codebuild,Concurrently running builds for Linux Lambda/2GB environment,300.0,1.0
+codebuild,Concurrently running builds for Linux/2XLarge environment,100.0,0.0
+codebuild,Concurrently running builds for Linux Lambda/4GB environment,300.0,1.0
+codebuild,Concurrently running builds for ARM Lambda/4GB environment,300.0,1.0
+codebuild,Concurrently running builds for ARM Lambda/1GB environment,300.0,1.0
+codebuild,Concurrently running builds for Linux/Small environment,300.0,1.0
+codebuild,Concurrently running builds for Linux GPU Large environment,60.0,0.0
+codebuild,Concurrently running builds for Linux Lambda/10GB environment,300.0,1.0
+codebuild,Concurrently running builds for Linux/XLarge environment,300.0,1.0
+codebuild,Concurrently running builds for Linux/Large environment,300.0,1.0
+codebuild,Concurrently running builds for Linux Lambda/8GB environment,300.0,1.0
+codebuild,Concurrently running builds for ARM Lambda/2GB environment,300.0,1.0
+codebuild,Concurrently running builds for ARM/Large environment,300.0,1.0
+codebuild,Concurrently running builds for ARM Lambda/10GB environment,300.0,1.0
+codebuild,Concurrently running builds for ARM/Small environment,300.0,1.0
+codebuild,Concurrently running builds for Linux Lambda/1GB environment,300.0,1.0
+codebuild,Concurrently running builds for Linux/Medium environment,300.0,1.0
+codebuild,Concurrently running builds for ARM Lambda/8GB environment,300.0,1.0
+ec2,Running Dedicated c7g Hosts,2.0,0.0
+ec2,Running Dedicated c6a Hosts,2.0,0.0
+ec2,Running Dedicated m5 Hosts,2.0,0.0
+ec2,Running Dedicated m6a Hosts,2.0,0.0
+ec2,Running Dedicated x1e Hosts,1.0,0.0
+ec2,Running Dedicated z1d Hosts,2.0,0.0
+ec2,Running Dedicated m5a Hosts,2.0,0.0
+ec2,Running Dedicated m7i Hosts,2.0,0.0
+ec2,Running Dedicated mac2-m2pro Hosts,5.0,0.0
+ec2,Running Dedicated x2idn Hosts,1.0,0.0
+ec2,Running Dedicated r5b Hosts,1.0,0.0
+ec2,Running Dedicated r3 Hosts,2.0,0.0
+ec2,Running Dedicated i2 Hosts,2.0,0.0
+ec2,"All Standard (A, C, D, H, I, M, R, T, Z) Spot Instance Requests",640.0,5.0
+ec2,Running Dedicated c3 Hosts,2.0,0.0
+ec2,Running On-Demand P instances,64.0,0.0
+ec2,Running Dedicated m5d Hosts,2.0,0.0
+ec2,Running Dedicated m5zn Hosts,2.0,0.0
+ec2,Running Dedicated im4gn Hosts,2.0,0.0
+ec2,All DL Spot Instance Requests,96.0,0.0
+ec2,Running Dedicated mac1 Hosts,3.0,0.0
+ec2,All F Spot Instance Requests,128.0,0.0
+ec2,Running Dedicated c6in Hosts,1.0,0.0
+ec2,Running Dedicated r6a Hosts,2.0,0.0
+ec2,Running Dedicated c5n Hosts,1.0,0.0
+ec2,Running Dedicated m6in Hosts,2.0,0.0
+ec2,Running Dedicated t3 Hosts,2.0,0.0
+ec2,Running Dedicated c7i Hosts,2.0,0.0
+ec2,Running Dedicated c6g Hosts,2.0,0.0
+ec2,Running Dedicated r5a Hosts,2.0,0.0
+ec2,Running Dedicated r6i Hosts,2.0,0.0
+ec2,Running Dedicated c6i Hosts,2.0,0.0
+ec2,Running Dedicated is4gen Hosts,2.0,0.0
+ec2,Running On-Demand F instances,128.0,0.0
+ec2,Running Dedicated r5ad Hosts,2.0,0.0
+ec2,Running Dedicated r5 Hosts,2.0,0.0
+ec2,Running Dedicated mac2-m2 Hosts,5.0,0.0
+ec2,Running On-Demand X instances,128.0,0.0
+ec2,Running Dedicated d2 Hosts,2.0,0.0
+ec2,Running Dedicated r4 Hosts,2.0,0.0
+ec2,Running Dedicated m4 Hosts,2.0,0.0
+ec2,Running Dedicated m3 Hosts,2.0,0.0
+ec2,Running Dedicated m6id Hosts,2.0,0.0
+ec2,"All P4, P3 and P2 Spot Instance Requests",64.0,0.0
+ec2,Running Dedicated c6id Hosts,2.0,0.0
+ec2,Concurrent client connections per Client VPN endpoint,126000.0,20000.0
+ec2,Multicast Network Interfaces per transit gateway,10000.0,1000.0
+ec2,Running Dedicated a1 Hosts,2.0,0.0
+ec2,Running Dedicated r6gd Hosts,2.0,0.0
+ec2,Running Dedicated x2iedn Hosts,1.0,0.0
+ec2,Running Dedicated c5 Hosts,2.0,0.0
+ec2,Running Dedicated c4 Hosts,2.0,0.0
+ec2,Running Dedicated r7i Hosts,2.0,0.0
+ec2,Running Dedicated r5d Hosts,2.0,0.0
+ec2,Running Dedicated m6g Hosts,2.0,0.0
+ec2,Running On-Demand High Memory instances,448.0,0.0
+ec2,Running Dedicated inf2 Hosts,2.0,0.0
+ec2,Running Dedicated r5dn Hosts,2.0,0.0
+ec2,Running Dedicated m5ad Hosts,2.0,0.0
+ec2,Running Dedicated m7gd Hosts,2.0,0.0
+ec2,Running Dedicated r7g Hosts,2.0,0.0
+ec2,Running Dedicated c6gd Hosts,2.0,0.0
+ec2,Running Dedicated r6id Hosts,2.0,0.0
+ec2,Running Dedicated c7gd Hosts,2.0,0.0
+ec2,All G and VT Spot Instance Requests,64.0,0.0
+ec2,All Trn Spot Instance Requests,256.0,0.0
+ec2,Running Dedicated f1 Hosts,2.0,0.0
+ec2,Running On-Demand DL instances,96.0,0.0
+ec2,Running Dedicated i3 Hosts,2.0,0.0
+ec2,Running Dedicated m6i Hosts,2.0,0.0
+ec2,"Running On-Demand Standard (A, C, D, H, I, M, R, T, Z) instances",640.0,5.0
+ec2,Running On-Demand HPC instances,768.0,0.0
+ec2,All Inf Spot Instance Requests,64.0,0.0
+ec2,Running Dedicated r5n Hosts,2.0,0.0
+ec2,Running Dedicated r6g Hosts,2.0,0.0
+ec2,Running Dedicated m7g Hosts,2.0,0.0
+ec2,Running Dedicated m6gd Hosts,2.0,0.0
+ec2,Running On-Demand Trn instances,256.0,0.0
+ec2,Running Dedicated m6idn Hosts,2.0,0.0
+ec2,Running On-Demand Inf instances,64.0,0.0
+ec2,Running Dedicated i4i Hosts,2.0,0.0
+ec2,Running Dedicated inf Hosts,2.0,0.0
+ec2,Running Dedicated r7gd Hosts,2.0,0.0
+ec2,Running Dedicated c6gn Hosts,2.0,0.0
+ec2,Running Dedicated c5d Hosts,2.0,0.0
+ec2,All P5 Spot Instance Requests,192.0,0.0
+ec2,All X Spot Instance Requests,128.0,0.0
+ec2,Running Dedicated x1 Hosts,1.0,0.0
+ec2,Running Dedicated i3en Hosts,2.0,0.0
+ec2,Running On-Demand G and VT instances,64.0,0.0
+ec2,Running Dedicated c5a Hosts,2.0,0.0
+emr-serverless,Max concurrent vCPUs per account,4000.0,16.0
+fargate,Fargate Spot vCPU resource count,4000.0,6.0
+fargate,Fargate On-Demand vCPU resource count,4000.0,6.0
+lambda,Concurrent executions,5000.0,1000.0
+sagemaker,ml.t2.xlarge for endpoint usage,30.0,0.0
+sagemaker,ml.m5.24xlarge for transform job usage,1.0,0.0
+sagemaker,ml.m5d.24xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.c4.xlarge for processing job usage,16.0,0.0
+sagemaker,ml.m5.2xlarge for training job usage,30.0,0.0
+sagemaker,ml.c6g.12xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.t3.xlarge for notebook instance usage,30.0,6.0
+sagemaker,ml.g4dn.2xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.c5.4xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.r6gd.8xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.r5.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m5.2xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.c6i.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m4.2xlarge for processing job usage,8.0,0.0
+sagemaker,Total EBS volume size in GB across all Studio Spaces,102400.0,500.0
+sagemaker,ml.c6i.2xlarge for spot training job usage,20.0,0.0
+sagemaker,ml.c5d.18xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.g5.2xlarge for training job usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.8xlarge instance,2.0,0.0
+sagemaker,Maximum number of deployment plans that can be simultaneously created,20.0,2.0
+sagemaker,ml.m6gd.xlarge for endpoint usage,16.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.12xlarge instance,2.0,0.0
+sagemaker,ml.c6i.32xlarge for training job usage,8.0,0.0
+sagemaker,ml.c6gd.xlarge for endpoint usage,8.0,0.0
+sagemaker,Maximum total concurrency that can be allocated across all serverless endpoints,1000.0,10.0
+sagemaker,ml.c6i.8xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m5.12xlarge for cluster usage,3.0,0.0
+sagemaker,ml.c5.18xlarge for processing job usage,1.0,0.0
+sagemaker,ml.m5.24xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.t3.medium for processing job usage,50.0,4.0
+sagemaker,ml.g5.12xlarge for spot training job usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.4xlarge instance,2.0,1.0
+sagemaker,RSessionGateway Apps running on ml.m5d.16xlarge instance,2.0,0.0
+sagemaker,Maximum number of serverless endpoints,50.0,5.0
+sagemaker,ml.m4.4xlarge for transform job usage,4.0,0.0
+sagemaker,ml.r5d.xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.m5.24xlarge for spot training job usage,2.0,0.0
+sagemaker,ml.c4.2xlarge for transform job usage,8.0,0.0
+sagemaker,ml.m4.xlarge for endpoint usage,16.0,0.0
+sagemaker,ml.c5d.large for endpoint usage,16.0,0.0
+sagemaker,ml.m6gd.8xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c6gd.8xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c6i.4xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.m4.4xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.c5n.2xlarge for spot training job usage,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.t3.xlarge instance,30.0,0.0
+sagemaker,RSessionGateway Apps running on ml.c5.xlarge instance,11.0,1.0
+sagemaker,Maximum number of devices,10000.0,400.0
+sagemaker,ml.p3.16xlarge for notebook instance usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.12xlarge instance,2.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.xlarge instance,11.0,1.0
+sagemaker,ml.m5.24xlarge for processing job usage,1.0,0.0
+sagemaker,ml.m5.xlarge for notebook instance usage,11.0,1.0
+sagemaker,ml.c5.18xlarge for transform job usage,1.0,0.0
+sagemaker,ml.c5d.2xlarge for notebook instance usage,11.0,1.0
+sagemaker,Studio KernelGateway Apps running on ml.t3.xlarge instance,30.0,0.0
+sagemaker,ml.c5.2xlarge for notebook instance usage,11.0,1.0
+sagemaker,RSessionGateway Apps running on ml.m5.4xlarge instance,6.0,1.0
+sagemaker,RSessionGateway Apps running on ml.m5d.2xlarge instance,11.0,1.0
+sagemaker,RSessionGateway Apps running on ml.m5.12xlarge instance,2.0,0.0
+sagemaker,ml.c5.2xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.m5.12xlarge for notebook instance usage,3.0,0.0
+sagemaker,ml.p2.8xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c6i.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c6gn.xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.c6i.xlarge for endpoint usage,8.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5.8xlarge instance,2.0,0.0
+sagemaker,ml.m5d.2xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.m5.large for spot training job usage,20.0,4.0
+sagemaker,ml.t2.large for notebook instance usage,30.0,6.0
+sagemaker,ml.c6i.8xlarge for training job usage,8.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5d.8xlarge instance,2.0,0.0
+sagemaker,ml.g4dn.xlarge for notebook instance usage,16.0,0.0
+sagemaker,ml.c6i.24xlarge for training job usage,8.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.2xlarge instance,11.0,1.0
+sagemaker,ml.c6gd.12xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c4.8xlarge for transform job usage,2.0,0.0
+sagemaker,ml.g5.16xlarge for cluster usage,1.0,0.0
+sagemaker,ml.r5.2xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.c5.2xlarge for training job usage,30.0,0.0
+sagemaker,ml.m5.8xlarge for cluster usage,3.0,0.0
+sagemaker,ml.m5.16xlarge for cluster usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.c5.18xlarge instance,2.0,0.0
+sagemaker,ml.p3.2xlarge for transform job usage,1.0,0.0
+sagemaker,ml.g4dn.2xlarge for notebook instance usage,8.0,0.0
+sagemaker,ml.c4.2xlarge for notebook instance usage,30.0,1.0
+sagemaker,ml.g4dn.4xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.c6i.12xlarge for training job usage,8.0,0.0
+sagemaker,ml.g4dn.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m6i.xlarge for spot training job usage,20.0,0.0
+sagemaker,ml.c5.4xlarge for training job usage,8.0,0.0
+sagemaker,ml.t2.2xlarge for endpoint usage,30.0,0.0
+sagemaker,ml.c7g.8xlarge for endpoint usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.t3.medium instance,30.0,2.0
+sagemaker,ml.m5d.24xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c6i.12xlarge for spot training job usage,5.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.4xlarge instance,6.0,1.0
+sagemaker,ml.r6gd.4xlarge for endpoint usage,2.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.12xlarge instance,4.0,0.0
+sagemaker,ml.c5.9xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.c4.2xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.g4dn.12xlarge for cluster usage,1.0,0.0
+sagemaker,ml.m4.10xlarge for notebook instance usage,8.0,0.0
+sagemaker,ml.c4.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.inf1.6xlarge for notebook instance usage,5.0,0.0
+sagemaker,Maximum number of Studio user profiles allowed per account,60.0,2.0
+sagemaker,ml.g5.xlarge for training job usage,1.0,0.0
+sagemaker,ml.m4.4xlarge for processing job usage,4.0,0.0
+sagemaker,ml.c4.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.t2.medium for endpoint usage,30.0,2.0
+sagemaker,ml.m6gd.16xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m5d.16xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.t3.large for cluster usage,20.0,0.0
+sagemaker,ml.t2.large for endpoint usage,30.0,0.0
+sagemaker,ml.c5d.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c5.xlarge for processing job usage,16.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5.xlarge instance,11.0,1.0
+sagemaker,ml.c4.xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.g5.8xlarge for cluster usage,1.0,0.0
+sagemaker,ml.r6g.xlarge for endpoint usage,4.0,0.0
+sagemaker,Number of instances across active endpoints,200.0,4.0
+sagemaker,ml.t2.medium for notebook instance usage,30.0,6.0
+sagemaker,ml.g4dn.8xlarge for cluster usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.4xlarge instance,4.0,0.0
+sagemaker,ml.m5.2xlarge for transform job usage,4.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.2xlarge instance,11.0,1.0
+sagemaker,ml.m5d.12xlarge for notebook instance usage,3.0,0.0
+sagemaker,ml.c5.2xlarge for cluster usage,30.0,0.0
+sagemaker,Maximum number of parallel edge-deployments,20.0,2.0
+sagemaker,ml.c6i.12xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.p2.xlarge for transform job usage,1.0,0.0
+sagemaker,ml.t3.2xlarge for notebook instance usage,30.0,6.0
+sagemaker,ml.c5n.2xlarge for cluster usage,1.0,0.0
+sagemaker,ml.p2.xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m6i.16xlarge for training job usage,3.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.t3.large instance,30.0,0.0
+sagemaker,ml.m5.large for training job usage,30.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.16xlarge instance,2.0,0.0
+sagemaker,Maximum number of running Studio apps allowed per account,80.0,40.0
+sagemaker,ml.c6i.32xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.g4dn.8xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.g4dn.12xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.c5.2xlarge for processing job usage,8.0,0.0
+sagemaker,ml.m5.24xlarge for cluster usage,2.0,0.0
+sagemaker,ml.c6gn.large for endpoint usage,16.0,0.0
+sagemaker,ml.c6i.large for endpoint usage,16.0,0.0
+sagemaker,ml.r5.12xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m5.4xlarge for processing job usage,4.0,0.0
+sagemaker,ml.g4dn.16xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.m6i.xlarge for training job usage,30.0,0.0
+sagemaker,ml.r5.large for notebook instance usage,11.0,1.0
+sagemaker,ml.m4.4xlarge for notebook instance usage,15.0,0.0
+sagemaker,ml.m4.xlarge for notebook instance usage,30.0,0.0
+sagemaker,ml.c6gd.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m4.2xlarge for notebook instance usage,30.0,0.0
+sagemaker,ml.m5.4xlarge for cluster usage,10.0,0.0
+sagemaker,ml.c5.4xlarge for cluster usage,8.0,0.0
+sagemaker,ml.m4.2xlarge for training job usage,30.0,0.0
+sagemaker,ml.r6g.8xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c6i.32xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.p2.xlarge for training job usage,1.0,0.0
+sagemaker,ml.m5.12xlarge for processing job usage,2.0,0.0
+sagemaker,ml.m5d.12xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.t3.xlarge for processing job usage,10.0,2.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.4xlarge instance,12.0,1.0
+sagemaker,Studio KernelGateway Apps running on ml.t3.medium instance,30.0,2.0
+sagemaker,ml.c5n.xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.inf1.2xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m4.16xlarge for transform job usage,1.0,0.0
+sagemaker,ml.m5.xlarge for endpoint usage,16.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.g4dn.xlarge instance,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.c5.24xlarge instance,2.0,0.0
+sagemaker,ml.c4.2xlarge for processing job usage,8.0,0.0
+sagemaker,ml.c5.large for cluster usage,30.0,0.0
+sagemaker,ml.m6i.4xlarge for training job usage,30.0,0.0
+sagemaker,ml.g4dn.16xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.m5.4xlarge for spot training job usage,10.0,2.0
+sagemaker,RStudioServerPro Apps running on ml.c5.4xlarge instances,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.24xlarge instance,2.0,0.0
+sagemaker,ml.c5n.4xlarge for cluster usage,1.0,0.0
+sagemaker,ml.c6gn.8xlarge for endpoint usage,1.0,0.0
+sagemaker,Maximum number of device-fleets,10.0,2.0
+sagemaker,ml.p3.8xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.g5.12xlarge for cluster usage,1.0,0.0
+sagemaker,ml.c5n.18xlarge for cluster usage,1.0,0.0
+sagemaker,Number of instances across all transform jobs,20.0,4.0
+sagemaker,ml.m5d.large for notebook instance usage,11.0,1.0
+sagemaker,ml.g4dn.16xlarge for training job usage,1.0,0.0
+sagemaker,ml.c5n.18xlarge for training job usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.18xlarge instance,2.0,0.0
+sagemaker,ml.c4.4xlarge for spot training job usage,20.0,0.0
+sagemaker,ml.m5.24xlarge for training job usage,3.0,0.0
+sagemaker,ml.m6i.16xlarge for spot training job usage,3.0,0.0
+sagemaker,ml.g5.8xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.c4.8xlarge for endpoint usage,1.0,0.0
+sagemaker,Total number of instances allowed across SageMaker HyperPod clusters,30.0,0.0
+sagemaker,ml.r6g.4xlarge for endpoint usage,2.0,0.0
+sagemaker,Maximum number of SageMakerImage images allowed per account,1000.0,250.0
+sagemaker,ml.c5n.18xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.m5.xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.c6gn.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.c6i.24xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.r5d.large for endpoint usage,4.0,0.0
+sagemaker,ml.g4dn.4xlarge for cluster usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.large instance,11.0,1.0
+sagemaker,ml.c5n.9xlarge for spot training job usage,1.0,0.0
+sagemaker,RStudioServerPro Apps running on ml.c5.9xlarge instances,1.0,0.0
+sagemaker,ml.c5.18xlarge for training job usage,8.0,0.0
+sagemaker,ml.g5.4xlarge for endpoint usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5.16xlarge instance,2.0,0.0
+sagemaker,ml.m6g.16xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.c5.4xlarge for spot training job usage,5.0,1.0
+sagemaker,ml.m5.12xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.c4.4xlarge for training job usage,30.0,0.0
+sagemaker,ml.p3dn.24xlarge for notebook instance usage,1.0,0.0
+sagemaker,ml.c5n.9xlarge for cluster usage,1.0,0.0
+sagemaker,ml.m4.xlarge for spot training job usage,20.0,4.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.8xlarge instance,2.0,0.0
+sagemaker,ml.r5.4xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.m6i.large for training job usage,30.0,0.0
+sagemaker,ml.g4dn.12xlarge for endpoint usage,1.0,0.0
+sagemaker,TensorBoard Apps running on system instances,40.0,10.0
+sagemaker,ml.m4.4xlarge for spot training job usage,10.0,2.0
+sagemaker,ml.t3.large for processing job usage,20.0,4.0
+sagemaker,ml.c6g.8xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.inf1.6xlarge for endpoint usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5d.4xlarge instance,6.0,1.0
+sagemaker,ml.c6i.4xlarge for training job usage,8.0,0.0
+sagemaker,ml.m6gd.4xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.g4dn.xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c5n.xlarge for training job usage,1.0,0.0
+sagemaker,ml.m5.4xlarge for transform job usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.c5.4xlarge instance,4.0,0.0
+sagemaker,ml.m5.2xlarge for notebook instance usage,11.0,1.0
+sagemaker,RSessionGateway Apps running on ml.c5.large instance,11.0,1.0
+sagemaker,ml.c5d.4xlarge for endpoint usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.c5.12xlarge instance,4.0,0.0
+sagemaker,ml.m6i.24xlarge for training job usage,3.0,0.0
+sagemaker,ml.g5.16xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.r6g.2xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m4.16xlarge for notebook instance usage,8.0,0.0
+sagemaker,ml.m5.xlarge for cluster usage,20.0,0.0
+sagemaker,ml.m5d.large for endpoint usage,16.0,0.0
+sagemaker,ml.c6gn.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c6g.16xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m4.16xlarge for processing job usage,1.0,0.0
+sagemaker,ml.m6i.8xlarge for training job usage,5.0,0.0
+sagemaker,ml.m5.xlarge for transform job usage,8.0,0.0
+sagemaker,ml.c5.18xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.c5.9xlarge for processing job usage,2.0,0.0
+sagemaker,ml.g5.2xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.c4.8xlarge for training job usage,16.0,0.0
+sagemaker,ml.r5.8xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.t3.xlarge for cluster usage,10.0,0.0
+sagemaker,ml.c5.9xlarge for cluster usage,8.0,0.0
+sagemaker,ml.r5.xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.m4.2xlarge for endpoint usage,16.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.12xlarge instance,2.0,0.0
+sagemaker,ml.g5.8xlarge for training job usage,1.0,0.0
+sagemaker,ml.c7g.large for endpoint usage,16.0,0.0
+sagemaker,ml.m5.2xlarge for cluster usage,20.0,0.0
+sagemaker,ml.m5d.4xlarge for notebook instance usage,6.0,0.0
+sagemaker,Maximum number of concurrent pipeline executions allowed per account,200.0,20.0
+sagemaker,ml.g5.xlarge for cluster usage,1.0,0.0
+sagemaker,ml.c5.xlarge for cluster usage,30.0,0.0
+sagemaker,ml.c6i.16xlarge for spot training job usage,5.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.4xlarge instance,4.0,0.0
+sagemaker,ml.c5n.9xlarge for training job usage,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.24xlarge instance,2.0,0.0
+sagemaker,ml.m4.10xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.c6i.xlarge for training job usage,30.0,0.0
+sagemaker,Number of instances across all spot training jobs,20.0,4.0
+sagemaker,Maximum number of Ground Truth labeling jobs,20.0,1.0
+sagemaker,ml.inf1.xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m6i.2xlarge for spot training job usage,20.0,0.0
+sagemaker,ml.c4.4xlarge for transform job usage,4.0,0.0
+sagemaker,ml.r6gd.2xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m4.xlarge for transform job usage,16.0,0.0
+sagemaker,Studio Jupyter Apps running on system instances,40.0,10.0
+sagemaker,ml.m6i.2xlarge for training job usage,30.0,0.0
+sagemaker,ml.m6g.xlarge for endpoint usage,16.0,1.0
+sagemaker,ml.c6i.xlarge for spot training job usage,20.0,0.0
+sagemaker,ml.c6i.24xlarge for spot training job usage,5.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5.24xlarge instance,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5.2xlarge instance,11.0,1.0
+sagemaker,ml.m5.large for transform job usage,16.0,0.0
+sagemaker,ml.c4.xlarge for transform job usage,16.0,0.0
+sagemaker,ml.m6i.4xlarge for spot training job usage,10.0,0.0
+sagemaker,ml.r5d.12xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c5.9xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.m4.16xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c7g.xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.m6gd.2xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.r5.xlarge for notebook instance usage,11.0,1.0
+sagemaker,ml.r5.16xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.g4dn.2xlarge for cluster usage,1.0,0.0
+sagemaker,ml.m6g.12xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.c5d.18xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m5.12xlarge for training job usage,5.0,0.0
+sagemaker,ml.c5.2xlarge for transform job usage,8.0,0.0
+sagemaker,ml.r5d.4xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.m4.10xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.m5d.2xlarge for notebook instance usage,11.0,0.0
+sagemaker,ml.m5.12xlarge for transform job usage,1.0,0.0
+sagemaker,ml.g4dn.xlarge for cluster usage,1.0,0.0
+sagemaker,ml.g4dn.xlarge for transform job usage,1.0,0.0
+sagemaker,ml.c6i.16xlarge for training job usage,8.0,0.0
+sagemaker,ml.t3.2xlarge for processing job usage,5.0,0.0
+sagemaker,ml.c5n.4xlarge for training job usage,1.0,0.0
+sagemaker,ml.m6i.24xlarge for spot training job usage,2.0,0.0
+sagemaker,ml.m6g.2xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.c4.4xlarge for notebook instance usage,30.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5.large instance,11.0,1.0
+sagemaker,ml.g5.8xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m6i.8xlarge for spot training job usage,10.0,0.0
+sagemaker,ml.c5.9xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.g5.xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.c5.large for endpoint usage,16.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.t3.2xlarge instance,30.0,0.0
+sagemaker,ml.c5d.xlarge for notebook instance usage,11.0,1.0
+sagemaker,ml.r6g.large for endpoint usage,4.0,0.0
+sagemaker,ml.c6gn.16xlarge for endpoint usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.large instance,11.0,1.0
+sagemaker,ml.c6g.4xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c5d.9xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.g4dn.4xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.g4dn.xlarge for training job usage,1.0,0.0
+sagemaker,ml.c5.4xlarge for processing job usage,4.0,0.0
+sagemaker,Maximum number of model card versions allowed per account.,10000.0,100.0
+sagemaker,ml.t3.medium for cluster usage,50.0,0.0
+sagemaker,ml.m5.4xlarge for notebook instance usage,6.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.16xlarge instance,2.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.large instance,11.0,1.0
+sagemaker,ml.c6g.large for endpoint usage,16.0,0.0
+sagemaker,ml.c5.9xlarge for transform job usage,2.0,0.0
+sagemaker,ml.m4.2xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.m5.large for endpoint usage,16.0,0.0
+sagemaker,Maximum number of parallel edge-packaging jobs,20.0,2.0
+sagemaker,RSessionGateway Apps running on ml.g4dn.xlarge instance,1.0,0.0
+sagemaker,ml.m5d.xlarge for notebook instance usage,11.0,1.0
+sagemaker,ml.c5.9xlarge for training job usage,8.0,0.0
+sagemaker,Total number of notebook instances,30.0,8.0
+sagemaker,ml.m5.12xlarge for spot training job usage,3.0,0.0
+sagemaker,ml.c5.xlarge for training job usage,30.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.large instance,11.0,1.0
+sagemaker,ml.c5n.4xlarge for spot training job usage,1.0,0.0
+sagemaker,Number of instances across all training jobs,30.0,4.0
+sagemaker,Number of instances across all processing jobs,75.0,4.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.24xlarge instance,2.0,0.0
+sagemaker,ml.t3.2xlarge for cluster usage,5.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.2xlarge instance,11.0,1.0
+sagemaker,ml.m4.10xlarge for processing job usage,2.0,0.0
+sagemaker,ml.g4dn.12xlarge for training job usage,1.0,0.0
+sagemaker,ml.g5.4xlarge for cluster usage,1.0,0.0
+sagemaker,ml.c6gd.16xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c5.xlarge for notebook instance usage,11.0,1.0
+sagemaker,ml.m5.4xlarge for endpoint usage,4.0,0.0
+sagemaker,Maximum number of SageMaker Model Package Groups allowed per account,1000.0,250.0
+sagemaker,ml.m4.4xlarge for training job usage,15.0,0.0
+sagemaker,RSessionGateway Apps running on ml.t3.large instance,30.0,0.0
+sagemaker,ml.g4dn.16xlarge for cluster usage,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5d.12xlarge instance,2.0,0.0
+sagemaker,ml.m5d.xlarge for endpoint usage,16.0,0.0
+sagemaker,Maximum number of pipelines allowed per account,5000.0,500.0
+sagemaker,ml.g4dn.xlarge for spot training job usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.xlarge instance,11.0,1.0
+sagemaker,ml.r6g.12xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m5.2xlarge for processing job usage,8.0,0.0
+sagemaker,ml.m6g.large for endpoint usage,16.0,2.0
+sagemaker,ml.m5.24xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.c5n.large for cluster usage,1.0,0.0
+sagemaker,ml.inf1.24xlarge for notebook instance usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.g4dn.2xlarge instance,1.0,0.0
+sagemaker,ml.m4.10xlarge for transform job usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5d.24xlarge instance,2.0,0.0
+sagemaker,Maximum number of instances per endpoint,200.0,4.0
+sagemaker,ml.c6gn.12xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c6gd.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c6g.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.r6gd.12xlarge for endpoint usage,1.0,0.0
+sagemaker,Maximum number of Ground Truth Streaming labeling jobs,20.0,0.0
+sagemaker,ml.m6g.4xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.m6gd.large for endpoint usage,16.0,0.0
+sagemaker,ml.m6i.12xlarge for spot training job usage,3.0,0.0
+sagemaker,ml.m5.4xlarge for training job usage,30.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.24xlarge instance,2.0,0.0
+sagemaker,ml.t2.2xlarge for notebook instance usage,30.0,6.0
+sagemaker,ml.g4dn.8xlarge for training job usage,1.0,0.0
+sagemaker,ml.c7g.2xlarge for endpoint usage,4.0,0.0
+sagemaker,Maximum number of concurrent AutoML Jobs,2.0,1.0
+sagemaker,ml.c6i.16xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.g5.16xlarge for training job usage,1.0,0.0
+sagemaker,ml.c4.xlarge for training job usage,30.0,0.0
+sagemaker,ml.g5.2xlarge for cluster usage,1.0,0.0
+sagemaker,ml.m6i.12xlarge for training job usage,5.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.xlarge instance,11.0,0.0
+sagemaker,ml.c6i.8xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.r6gd.large for endpoint usage,4.0,0.0
+sagemaker,ml.c4.8xlarge for notebook instance usage,30.0,0.0
+sagemaker,ml.c4.4xlarge for processing job usage,4.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.16xlarge instance,2.0,0.0
+sagemaker,ml.inf1.xlarge for notebook instance usage,5.0,0.0
+sagemaker,ml.c5.18xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.c4.large for endpoint usage,16.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.g4dn.2xlarge instance,1.0,0.0
+sagemaker,ml.c4.8xlarge for processing job usage,2.0,0.0
+sagemaker,ml.p3.2xlarge for notebook instance usage,8.0,0.0
+sagemaker,ml.r5d.2xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.g4dn.8xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.c7g.12xlarge for endpoint usage,2.0,0.0
+sagemaker,RSessionGateway Apps running on ml.c5.9xlarge instance,4.0,0.0
+sagemaker,ml.c5d.xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.c6gd.large for endpoint usage,16.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.large instance,11.0,1.0
+sagemaker,ml.c5.12xlarge for cluster usage,8.0,0.0
+sagemaker,ml.m6g.8xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.g4dn.12xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.c5.4xlarge for transform job usage,4.0,0.0
+sagemaker,ml.m5.large for cluster usage,20.0,0.0
+sagemaker,ml.r6gd.xlarge for endpoint usage,4.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.xlarge instance,11.0,1.0
+sagemaker,ml.c5d.9xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.r5.2xlarge for notebook instance usage,11.0,0.0
+sagemaker,Total domains,5.0,2.0
+sagemaker,ml.g5.xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c4.2xlarge for training job usage,30.0,0.0
+sagemaker,ml.c5.4xlarge for endpoint usage,4.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.12xlarge instance,2.0,0.0
+sagemaker,ml.c7g.4xlarge for endpoint usage,4.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5d.24xlarge instance,2.0,0.0
+sagemaker,ml.m4.16xlarge for spot training job usage,5.0,0.0
+sagemaker,ml.g5.4xlarge for spot training job usage,1.0,0.0
+sagemaker,ml.t3.large for notebook instance usage,30.0,6.0
+sagemaker,RSessionGateway Apps running on ml.c5.2xlarge instance,11.0,1.0
+sagemaker,ml.m6gd.12xlarge for endpoint usage,2.0,0.0
+sagemaker,ml.r5.24xlarge for notebook instance usage,2.0,0.0
+sagemaker,ml.g5.2xlarge for spot training job usage,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5d.xlarge instance,11.0,1.0
+sagemaker,ml.r5.12xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.m4.16xlarge for training job usage,8.0,0.0
+sagemaker,ml.g5.4xlarge for training job usage,1.0,0.0
+sagemaker,ml.t2.xlarge for notebook instance usage,30.0,6.0
+sagemaker,ml.c5.xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.m6i.32xlarge for spot training job usage,2.0,0.0
+sagemaker,ml.m4.2xlarge for transform job usage,8.0,0.0
+sagemaker,ml.c5n.2xlarge for training job usage,1.0,0.0
+sagemaker,ml.c4.8xlarge for spot training job usage,16.0,0.0
+sagemaker,ml.m6i.large for spot training job usage,20.0,0.0
+sagemaker,ml.g4dn.4xlarge for training job usage,1.0,0.0
+sagemaker,ml.g5.12xlarge for training job usage,1.0,0.0
+sagemaker,ml.c7g.16xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m5.xlarge for training job usage,30.0,0.0
+sagemaker,ml.m4.xlarge for processing job usage,16.0,0.0
+sagemaker,ml.m4.xlarge for training job usage,30.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.xlarge instance,11.0,1.0
+sagemaker,RSessionGateway Apps running on ml.r5.2xlarge instance,11.0,1.0
+sagemaker,ml.m5d.4xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.g4dn.2xlarge for endpoint usage,2.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.c5.9xlarge instance,4.0,0.0
+sagemaker,ml.c4.xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.g4dn.2xlarge for training job usage,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.t3.2xlarge instance,30.0,0.0
+sagemaker,ml.c6g.xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.m5.2xlarge for endpoint usage,8.0,0.0
+sagemaker,ml.inf1.24xlarge for endpoint usage,1.0,0.0
+sagemaker,RSessionGateway Apps running on ml.r5.8xlarge instance,2.0,0.0
+sagemaker,ml.t3.medium for notebook instance usage,30.0,6.0
+sagemaker,Maximum number of A2I human task UIs,2000.0,100.0
+sagemaker,ml.c5.2xlarge for endpoint usage,4.0,0.0
+sagemaker,ml.c5d.4xlarge for notebook instance usage,4.0,0.0
+sagemaker,ml.p3.2xlarge for training job usage,1.0,0.0
+sagemaker,ml.c5.xlarge for spot training job usage,20.0,4.0
+sagemaker,ml.m5d.8xlarge for notebook instance usage,3.0,0.0
+sagemaker,ml.g4dn.8xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.m5.xlarge for processing job usage,16.0,0.0
+sagemaker,RSessionGateway Apps running on ml.m5d.large instance,11.0,1.0
+sagemaker,ml.c4.xlarge for notebook instance usage,30.0,2.0
+sagemaker,Maximum number of parallel compilation jobs,20.0,2.0
+sagemaker,ml.c6i.2xlarge for training job usage,30.0,0.0
+sagemaker,ml.m4.10xlarge for training job usage,8.0,0.0
+sagemaker,ml.m5.large for processing job usage,16.0,0.0
+sagemaker,ml.inf1.2xlarge for notebook instance usage,5.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.2xlarge instance,11.0,1.0
+sagemaker,ml.p2.xlarge for spot training job usage,1.0,0.0
+sagemaker,Maximum number of Studio spaces allowed per account,4.0,6.0
+sagemaker,ml.c5.18xlarge for endpoint usage,1.0,0.0
+sagemaker,ml.c5.xlarge for transform job usage,16.0,0.0
+sagemaker,ml.p3.2xlarge for spot training job usage,1.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.r5.8xlarge instance,2.0,0.0
+sagemaker,ml.c5.24xlarge for cluster usage,8.0,0.0
+sagemaker,ml.m6i.32xlarge for training job usage,3.0,0.0
+sagemaker,ml.r5.large for endpoint usage,4.0,0.0
+sagemaker,Studio KernelGateway Apps running on ml.m5.16xlarge instance,2.0,0.0
+sagemaker,ml.c5.18xlarge for cluster usage,8.0,0.0
+vpc,Egress-only internet gateways per Region,10.0,5.0
+vpc,VPCs per Region,10.0,5.0
+vpc,Internet gateways per Region,10.0,5.0
+workspaces,WorkSpaces,200.0,1.0

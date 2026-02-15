@@ -1,8 +1,15 @@
+"""
+Export applied service quotas that differ from defaults to CSV.
+
+This script analyzes all AWS service quotas in a region and exports
+those that have been modified from their default values to a CSV file.
+"""
 import sys
 import csv
+import argparse
 import boto3
-import time
 from botocore.exceptions import BotoCoreError, ClientError
+from utils.aws_clients import aws_client_factory
 
 
 def get_services(client):
@@ -37,15 +44,27 @@ def get_default_quota(client, service_code, quota_code):
         return None
 
 
-def check_quotas(region):
-    """Check quotas for a region, output to CSV where applied quota differs from default."""
-    session = boto3.Session(region_name=region)
-    service_quotas_client = session.client("service-quotas")
+def check_quotas(region, output_file="service_quotas.csv", verbose=False):
+    """
+    Check quotas for a region, output to CSV where applied quota differs from default.
+    
+    Args:
+        region: AWS region to analyze
+        output_file: Output CSV filename
+        verbose: Enable verbose output
+    """
+    service_quotas_client = aws_client_factory.get_quota_client(region)
 
     services = get_services(service_quotas_client)
-    print("Comparing: ")
+    
+    if verbose:
+        print(f"Found {len(services)} services to analyze in {region}")
+    
+    print("Analyzing service quotas...")
 
-    with open("service_quotas.csv", "w", newline="") as csvfile:
+    differences_found = 0
+    
+    with open(output_file, "w", newline="") as csvfile:
         fieldnames = ["Service", "Quota Name", "Applied Quota", "Default Quota"]
         writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
 
@@ -62,7 +81,7 @@ def check_quotas(region):
                         "Applied Quota": quota["Value"],
                         "Default Quota": default_quota
                     })
-                time.sleep(0.2)  # Delay to account for API throttling (5 requests per second)
+                # Removed manual sleep - boto3 handles retries automatically
 
 
 if __name__ == "__main__":
@@ -71,6 +90,6 @@ if __name__ == "__main__":
         sys.exit(1)
 
     REGION = sys.argv[1]
-    print("Checking Applied verses Default quotas. Note this process takes a while due to API throttle rates")
+    print("Checking Applied vs Default quotas. This process may take a while due to the number of API calls required.")
     check_quotas(REGION)
     print("\nDone! Where Applied quota differs from Default it is listed in the created service_quotas.csv file")
